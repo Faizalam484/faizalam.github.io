@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Faiz Alam | Finance &amp; Analytics</title>
+<meta name="description" content="Finance and analytics professional (MBA, University of Delhi) with experience in financial modeling, DCF valuation, equity research and operations analytics.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Serif:wght@500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#f6f7f9;
+  --surface:#ffffff;
+  --ink:#16202e;
+  --muted:#556072;
+  --line:#dde2ea;
+  --accent:#0f6b55;
+  --accent-soft:#e3f1ec;
+  --serif:"IBM Plex Serif",Georgia,"Times New Roman",serif;
+  --sans:"IBM Plex Sans",system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;
+}
+@media (prefers-color-scheme:dark){
+  :root{
+    --bg:#10161f;
+    --surface:#171f2b;
+    --ink:#e8edf4;
+    --muted:#9aa6b8;
+    --line:#273244;
+    --accent:#5fcfae;
+    --accent-soft:#17302b;
+  }
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{
+  margin:0;background:var(--bg);color:var(--ink);
+  font-family:var(--sans);font-size:16px;line-height:1.6;
+  -webkit-font-smoothing:antialiased;
+}
+a{color:var(--accent);text-decoration:none}
+a:hover{text-decoration:underline}
+a:focus-visible,button:focus-visible{outline:3px solid var(--accent);outline-offset:3px;border-radius:3px}
+
+.layout{
+  max-width:1120px;margin:0 auto;padding:0 28px;
+  display:grid;grid-template-columns:300px 1fr;gap:72px;
+}
+
+/* Sidebar */
+.side{
+  position:sticky;top:0;align-self:start;height:100vh;
+  display:flex;flex-direction:column;justify-content:space-between;
+  padding:64px 0 40px;
+}
+.name{
+  font-family:var(--serif);font-weight:600;font-size:2.4rem;line-height:1.1;
+  margin:0 0 14px;letter-spacing:-.01em;
+}
+.role{margin:0 0 6px;font-weight:500;font-size:1.05rem}
+.where{margin:0;color:var(--muted);font-size:.95rem}
+nav ul{list-style:none;margin:48px 0 0;padding:0}
+nav a{
+  display:inline-block;padding:6px 0 6px 16px;color:var(--muted);font-weight:500;
+  border-left:2px solid var(--line);width:100%;
+}
+nav a:hover{color:var(--ink);text-decoration:none;border-left-color:var(--ink)}
+nav a.on{color:var(--accent);border-left-color:var(--accent)}
+.contact{list-style:none;margin:0;padding:0;font-size:.93rem}
+.contact li{margin:0 0 6px}
+.contact span{color:var(--muted);display:inline-block;min-width:68px}
+
+/* Main */
+main{padding:64px 0 96px;min-width:0}
+section{padding-bottom:56px;scroll-margin-top:32px}
+h2{
+  font-family:var(--serif);font-weight:600;font-size:1.55rem;line-height:1.2;
+  margin:0 0 24px;padding-bottom:12px;border-bottom:1px solid var(--line);
+}
+h3{font-size:1.05rem;font-weight:600;margin:0;line-height:1.35}
+p{margin:0 0 14px}
+.lede{font-size:1.15rem;line-height:1.7;max-width:62ch}
+
+.entry{
+  display:grid;grid-template-columns:150px 1fr;gap:8px 28px;
+  padding:0 0 32px;
+}
+.entry:last-child{padding-bottom:0}
+.when{color:var(--muted);font-size:.9rem;padding-top:3px}
+.org{color:var(--muted);margin:2px 0 12px;font-size:.95rem}
+ul.pts{margin:0;padding-left:18px}
+ul.pts li{margin:0 0 8px;padding-left:2px}
+ul.pts li::marker{color:var(--accent)}
+strong{font-weight:600}
+
+.tag{
+  display:inline-block;font-size:.78rem;font-weight:500;color:var(--accent);
+  background:var(--accent-soft);padding:2px 9px;border-radius:99px;margin-left:8px;
+  vertical-align:2px;
+}
+
+/* Skills */
+.skills{display:grid;gap:22px}
+.skills h3{margin-bottom:10px}
+.chips{display:flex;flex-wrap:wrap;gap:8px;list-style:none;margin:0;padding:0}
+.chips li{
+  background:var(--surface);border:1px solid var(--line);border-radius:6px;
+  padding:4px 11px;font-size:.92rem;
+}
+
+.ach{list-style:none;margin:0;padding:0}
+.ach li{background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:16px 20px;margin-bottom:12px}
+.ach p{margin:4px 0 0;color:var(--muted);font-size:.95rem}
+
+.cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:24px}
+.btn{
+  display:inline-block;padding:10px 18px;border-radius:6px;font-weight:500;
+  border:1px solid var(--accent);color:var(--accent);
+}
+.btn.fill{background:var(--accent);color:var(--bg)}
+.btn:hover{text-decoration:none;opacity:.88}
+
+footer{color:var(--muted);font-size:.85rem;padding-top:8px}
+
+@media (max-width:900px){
+  .layout{grid-template-columns:1fr;gap:0;padding:0 20px}
+  .side{position:static;height:auto;padding:44px 0 8px}
+  nav ul{display:flex;flex-wrap:wrap;gap:4px 18px;margin:24px 0}
+  nav a{border-left:0;border-bottom:2px solid var(--line);padding:4px 0;width:auto}
+  nav a:hover,nav a.on{border-left:0}
+  nav a.on{border-bottom-color:var(--accent)}
+  .contact{margin-top:8px}
+  main{padding-top:24px}
+  .entry{grid-template-columns:1fr;gap:2px}
+  .when{order:-1;padding:0}
+}
+@media print{
+  .side{position:static;height:auto}
+  nav,.cta{display:none}
+}
+</style>
+</head>
+<body>
+<div class="layout">
+
+  <header class="side">
+    <div>
+      <h1 class="name">Faiz Alam</h1>
+      <p class="role">Finance &amp; Analytics</p>
+      <p class="where">Delhi, India</p>
+      <nav aria-label="Sections">
+        <ul>
+          <li><a href="#about">About</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#education">Education</a></li>
+          <li><a href="#achievements">Achievements</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+    <ul class="contact">
+      <li><span>Email</span><a href="mailto:alamfaiz2586@gmail.com">alamfaiz2586@gmail.com</a></li>
+      <li><span>Phone</span><a href="tel:+917290802430">+91 7290802430</a></li>
+      <li><span>LinkedIn</span><a href="https://www.linkedin.com/in/faiz-alam18" target="_blank" rel="noopener">faiz-alam18</a></li>
+    </ul>
+  </header>
+
+  <main>
+    <section id="about">
+      <h2>About</h2>
+      <p class="lede">Finance and analytics professional (MBA, University of Delhi) with experience across financial modeling, DCF valuation, equity research and operations analytics. Skilled in Excel, Power BI and Stata, with hands-on experience building data-driven tools, including a rule-based trading system and a personal finance app.</p>
+    </section>
+
+    <section id="experience">
+      <h2>Experience</h2>
+
+      <article class="entry">
+        <div class="when">May 2025 – May 2026</div>
+        <div>
+          <h3>AfterQuery Expert – Finance &amp; AI <span class="tag">Contract</span></h3>
+          <p class="org">AfterQuery, Remote</p>
+          <ul class="pts">
+            <li>Delivered <strong>7+ finance and AI projects</strong> for consulting and AI-training assignments, covering financial analysis and research.</li>
+            <li>Rectified <strong>100+ financial AI responses</strong>, ensuring accurate calculations and consistent valuation methodologies.</li>
+            <li>Produced <strong>15+ financial models, reports, and presentation decks</strong> by analyzing financial statements, valuation inputs, company performance, and market data to support decision-making.</li>
+          </ul>
+        </div>
+      </article>
+
+      <article class="entry">
+        <div class="when">Jun 2024 – Jul 2024</div>
+        <div>
+          <h3>Operations Analytics Intern</h3>
+          <p class="org">Bluwheelz Mobility, Noida, Uttar Pradesh</p>
+          <ul class="pts">
+            <li>Analyzed demand, supply and partner-payment data for <strong>150+ DCOs</strong> across Delhi, focusing on 3 zones, to identify <strong>2 key optimization areas</strong>: demand-supply gaps and low vehicle utilization.</li>
+            <li>Improved operational reporting accuracy by maintaining 3+ databases for analysis and decision-making.</li>
+          </ul>
+        </div>
+      </article>
+
+      <article class="entry">
+        <div class="when">Apr 2024 – May 2024</div>
+        <div>
+          <h3>Equity Analyst Intern</h3>
+          <p class="org">Fundsroom, Remote</p>
+          <ul class="pts">
+            <li>Recommended stocks after fundamental and technical analysis of <strong>10+ listed companies</strong>, averaging a <strong>10% return</strong> over two months.</li>
+            <li>Developed equity research and financial models, including DCF valuation, to support valuation and investment decisions.</li>
+            <li>Improved investment analysis by developing interactive <strong>Power BI dashboards</strong> for company comparison.</li>
+          </ul>
+        </div>
+      </article>
+    </section>
+
+    <section id="projects">
+      <h2>Projects</h2>
+
+      <article class="entry">
+        <div class="when">Apr 2026 – Present</div>
+        <div>
+          <h3>Algorithmic Trading Bot <span class="tag">Personal project</span></h3>
+          <ul class="pts">
+            <li>Developing a rule-based <strong>automated trading bot</strong> to execute trades using predefined entry, exit, position-sizing, and risk-management rules.</li>
+            <li>Backtested the strategy using historical data to assess profitability, drawdowns, and risk while refining trading logic.</li>
+          </ul>
+        </div>
+      </article>
+
+      <article class="entry">
+        <div class="when">Sep 2026 – Oct 2026</div>
+        <div>
+          <h3>FinMate <span class="tag">Personal finance management app</span></h3>
+          <ul class="pts">
+            <li>Built and deployed a personal <strong>finance app</strong> integrating budgeting, expense tracking, income management, and net-worth tracking into a single platform.</li>
+            <li>Built and iterated the app using AI-assisted coding tools, translating finance requirements into working features.</li>
+          </ul>
+        </div>
+      </article>
+
+      <article class="entry">
+        <div class="when">Jan 2021 – Present</div>
+        <div>
+          <h3>Independent Financial Markets Research &amp; Trading</h3>
+          <ul class="pts">
+            <li>Research and trade equities, crypto, commodities and forex (current focus: gold, XAU/USD), evaluating companies and IPOs on financial statements, valuation metrics and risk factors.</li>
+          </ul>
+        </div>
+      </article>
+
+      <article class="entry">
+        <div class="when">Jul 2024 – May 2025</div>
+        <div>
+          <h3>Growth Convergence Across Indian States <span class="tag">Research paper</span></h3>
+          <ul class="pts">
+            <li>Analyzed growth convergence across Indian states using panel econometric techniques in Stata.</li>
+          </ul>
+        </div>
+      </article>
+    </section>
+
+    <section id="skills">
+      <h2>Skills</h2>
+      <div class="skills">
+        <div>
+          <h3>Finance</h3>
+          <ul class="chips">
+            <li>Financial Analysis</li><li>Financial Modeling</li><li>DCF Valuation</li><li>Equity Research</li><li>Fundamental Analysis</li><li>Investment Analysis</li><li>IPO Analysis</li>
+          </ul>
+        </div>
+        <div>
+          <h3>Analytics</h3>
+          <ul class="chips">
+            <li>Data Analysis</li><li>Data Visualization</li><li>KPI &amp; MIS Reporting</li><li>Management Reporting</li><li>Operations Analytics</li>
+          </ul>
+        </div>
+        <div>
+          <h3>Tools</h3>
+          <ul class="chips">
+            <li>Advanced Excel (Pivot Tables, XLOOKUP, VLOOKUP, INDEX-MATCH)</li><li>VS Code</li><li>Android Studio</li><li>Power BI</li><li>Stata</li><li>TradingView</li><li>Pine Script</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="education">
+      <h2>Education</h2>
+
+      <article class="entry">
+        <div class="when">Jul 2023 – Jun 2025</div>
+        <div>
+          <h3>Master of Business Administration (MBA) – Finance &amp; Analytics</h3>
+          <p class="org">Department of Finance &amp; Business Economics, University of Delhi</p>
+        </div>
+      </article>
+
+      <article class="entry">
+        <div class="when">Jul 2020 – Jun 2023</div>
+        <div>
+          <h3>Bachelor of Commerce (Hons)</h3>
+          <p class="org">Kirori Mal College, University of Delhi</p>
+        </div>
+      </article>
+    </section>
+
+    <section id="achievements">
+      <h2>Achievements &amp; Leadership</h2>
+      <ul class="ach">
+        <li><h3>UGC NET Qualified – Commerce &amp; Management</h3></li>
+        <li>
+          <h3>Industry Relations Officer, Bluechips</h3>
+          <p>Mentored juniors in equity research and organized finance events.</p>
+        </li>
+      </ul>
+    </section>
+
+    <section id="contact">
+      <h2>Contact</h2>
+      <p>Based in Delhi, India. The quickest way to reach me is by email.</p>
+      <div class="cta">
+        <a class="btn fill" href="mailto:alamfaiz2586@gmail.com">Email me</a>
+        <a class="btn" href="https://www.linkedin.com/in/faiz-alam18" target="_blank" rel="noopener">View LinkedIn</a>
+        <a class="btn" href="tel:+917290802430">Call +91 7290802430</a>
+      </div>
+    </section>
+
+    <footer>&copy; 2026 Faiz Alam</footer>
+  </main>
+</div>
+
+<script>
+(function(){
+  var links=[].slice.call(document.querySelectorAll('nav a'));
+  var map={};
+  links.forEach(function(a){map[a.getAttribute('href').slice(1)]=a});
+  if(!('IntersectionObserver' in window))return;
+  var io=new IntersectionObserver(function(entries){
+    entries.forEach(function(e){
+      if(e.isIntersecting){
+        links.forEach(function(a){a.classList.remove('on')});
+        var a=map[e.target.id]; if(a)a.classList.add('on');
+      }
+    });
+  },{rootMargin:'-20% 0px -70% 0px'});
+  document.querySelectorAll('main section').forEach(function(s){io.observe(s)});
+})();
+</script>
+</body>
+</html>
